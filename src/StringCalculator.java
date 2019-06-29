@@ -4,7 +4,7 @@ public class StringCalculator {
 
 	public static void main(String[] args) {
 		StringCalculator test = new StringCalculator();
-		String input = new String("//h\n2,5\n3,-100h-900");
+		String input = new String("//h\n2,5\n3,-100h-900,1001");
 		int i = test.Add(input);
 		System.out.println(i);
 	}
@@ -67,7 +67,9 @@ public class StringCalculator {
 		
 			try{
 				if(i>0) {
-					sum += i;
+					if(i<=1000) {
+						sum += i;
+					}
 				}else {
 					throw new NegativeNumberException("Negatives not allowed "+ i.toString());
 				}
