@@ -4,10 +4,21 @@ public class StringCalculator {
 
 	public static void main(String[] args) {
 		StringCalculator test = new StringCalculator();
-		String input = new String("//h\n2,5\n3,100h900");
+		String input = new String("//h\n2,5\n3,-100h-900");
 		int i = test.Add(input);
 		System.out.println(i);
 	}
+	
+	class NegativeNumberException extends Exception
+	{
+
+	      public NegativeNumberException() {}
+
+	      public NegativeNumberException(String message)
+	      {
+	         super(message);
+	      }
+	 }
 
 	int Add(String numbers) {
 		if(numbers == null||numbers.equals("")) {
@@ -53,8 +64,18 @@ public class StringCalculator {
 		}
 		
 		for(Integer i:list) {
-			System.out.println(i);
-			sum += i;
+		
+			try{
+				if(i>0) {
+					sum += i;
+				}else {
+					throw new NegativeNumberException("Negatives not allowed "+ i.toString());
+				}
+				
+			}catch(NegativeNumberException e) {
+				System.err.println(e.getMessage());
+			}
+			
 		}
 		
 		return sum;
