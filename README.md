@@ -1,22 +1,23 @@
+It was recruiting test for Java
 Its a simple String Calculator
 
     1. Create a simple String calculator with a method signature:
 
-    ———————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
     int Add(string numbers)
 
-    ———————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
     The method can take up to two numbers, separated by commas, and will return their sum. 
 
-    for example “” or “1” or “1,2” as inputs.
+    for example â€œâ€ or â€œ1â€ or â€œ1,2â€ as inputs.
 
     (for an empty string it will return 0) 
 
     Hints:
 
-    ——————
+    â€”â€”â€”â€”â€”â€”
 
      - Start with the simplest test case of an empty string and move to one and two numbers
 
@@ -24,48 +25,48 @@ Its a simple String Calculator
 
      - Remember to refactor after each passing test
 
-    ———————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
   2. Allow the Add method to handle an unknown amount of numbers
 
-    ————————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
    3. Allow the Add method to handle new lines between numbers (instead of commas).
 
-        the following input is ok: “1\n2,3” (will equal 6)
+        the following input is ok: â€œ1\n2,3â€ (will equal 6)
 
-        the following input is NOT ok: “1,\n” (not need to prove it - just clarifying)
+        the following input is NOT ok: â€œ1,\nâ€ (not need to prove it - just clarifying)
 
-        ——————————————————————————————-
+        â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”-
 
    4. Support different delimiters
 
-        to change a delimiter, the beginning of the string will contain a separate line that looks like this: “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
+        to change a delimiter, the beginning of the string will contain a separate line that looks like this: â€œ//[delimiter]\n[numbersâ€¦]â€ for example â€œ//;\n1;2â€ should return three where the default delimiter is â€˜;â€™ .
 
         the first line is optional. all existing scenarios should still be supported
 
-        ————————————————————————————————
+        â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
-    5. Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed. 
+    5. Calling Add with a negative number will throw an exception â€œnegatives not allowedâ€ - and the negative that was passed. 
 
     if there are multiple negatives, show all of them in the exception message.
 
-    ————————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
     STOP HERE if you are a beginner. Continue if you can finish the steps so far in less than 30 minutes.
 
-    ————————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
     6. Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
 
-    ————————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
-    7. Delimiters can be of any length with the following format: “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6
+    7. Delimiters can be of any length with the following format: â€œ//[delimiter]\nâ€ for example: â€œ//[***]\n1***2***3â€ should return 6
 
-    ————————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
-    8. Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.
+    8. Allow multiple delimiters like this: â€œ//[delim1][delim2]\nâ€ for example â€œ//[*][%]\n1*2%3â€ should return 6.
 
-    ————————————————————————————————
+    â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
    9.  make sure you can also handle multiple delimiters with length longer than one char
